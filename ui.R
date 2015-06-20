@@ -1,10 +1,10 @@
 library(shiny)
 shinyUI(pageWithSidebar(
-        headerPanel("Number of days since new millenium?"),
+        headerPanel("Circumference of a circle"),
         sidebarPanel(
-                dateInput("enterDate","Enter a day:",min="2000-01-01"),
-                h6("Number of days since the new millenium:"),
-                verbatimTextOutput("returnjulianday")
+                sliderInput("enterRadius","Enter radius of the circle:",value=1,min=0,max=100,step=1),
+                h6("Circumference of the circle equals"),
+                verbatimTextOutput("Circum")
         ),
         mainPanel(
                 
